@@ -1,0 +1,119 @@
+/*
+App.js
+======
+import React from "react";
+import Header from "./Header";
+
+function App() {
+  return (
+      <Header />
+  )
+}
+export default App
+
+Header.js:
+=========
+import React from "react";
+import Social from "./Social";
+
+function Header() { 
+    return (
+        <div className="newContainer">
+            <Social
+                p={{
+                    img:'https://picsum.photos/200',
+                }}
+                
+            />
+            <Social
+               p={{
+                   img:'https://picsum.photos/201',
+                }}
+            />
+            <Social
+                 p={{
+                    img:'https://picsum.photos/205',
+                 }}
+            /> 
+            <Social
+                 p={{
+                   img:'https://picsum.photos/203',
+                  }}
+            /> 
+        </div>
+    )
+}
+export default Header
+
+Social.js
+=========
+import React from "react";
+
+
+function Social(props) {
+    const info = {
+        working: true,
+        number: true,
+        email: true,
+        website: true,
+        name: true,
+    }
+    return (
+        <div className={`child ${info.website?"":'newcolor'}`}>
+            <img src={props.p.img} alt="moemen" />
+            <p>{info.name===true?'Moemen Saadeh':''}<br />
+                {info.working===true?'Full Stack':''}<br/>
+               {info.number===true?'Phone: +90 535685':''}<br />
+                {info.email === true ? 'Email: moemen5@gmail.com' : ''}<br />
+               {info.website===true?'Website:saadeh.org':""}
+            </p>
+        </div>
+    )
+    
+}
+export default Social
+
+App.css
+======
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.newContainer{
+  margin: 20px auto;
+  background-color:#eee;
+  width: 900px;
+  height: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.child{
+  width: 49%;
+  height:49%;
+  background-color: black;
+  border: 3px solid black;
+
+}
+img{
+  width:90%;
+  height: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+p{
+  color: #fff;
+  font-family: sans-serif;
+  text-align: center;
+}
+.newcolor{
+  background-color: forestgreen;
+}
+
+
+
+
+
+*/
